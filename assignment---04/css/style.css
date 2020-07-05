@@ -50,7 +50,7 @@ img {
 	width: 90px;
 }
 #header div ul li a:hover {
-	color: #82ae3f;
+	/* color: #82ae3f; */
 }
 #content {
 	background: #7cc116 url(../images/bg-content.gif) repeat-x top left;
