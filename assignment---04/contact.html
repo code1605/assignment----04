@@ -17,6 +17,12 @@
 <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css">![endif]>-->
 </head>
 <body>
+
+  <?php if (isset($_GET['done']): ?>
+      <script type='text/javascript'>alert('enquiry successfully sent');</script>
+    }
+  <?php endif; ?>
+
 <div id="header">
   <div> <a href="index.html"><img src="images/logo.gif" alt=""></a>
     <ul>
@@ -32,32 +38,28 @@
     <div> <img src="images/calling.jpg" alt=""> </div>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <div class="container">
-          <h1 class="form-h1">Enquiries</h1>
-          <form class="modal-content" onSubmit="return validateForm()" name="enquiries"   >
-            <div class="container">
-              
-              <label for="userid"><b> Name:</b></label>
-              <input type="text" placeholder="Enter  your name" name="userid" size="12">
-              <div class="status" id="status"></div>
-    
-              <label for="phone"><b>Number:</b></label>
-              <input type="number" placeholder="Enter Phone number" name="phone"  size="12">
-    
-              <label for="email"><b>Email:</b></label>
-              <input type="text" class="form-control" placeholder="Enter Email" name="email">
-              <div class="help-block with-errors"></div>
-    
-              <label for="enquiries"><b>Enquiry:</b></b></label>
-              <textarea name="enquiries" placeholder="Type Here" class="txt-area" ></textarea>
-    
-              <div class="clearfix">
-                <button type="submit" class="signupbtn" onSubmit= "return validateForm()" onclick="submitForm()">Submit</button>
-              </div>
-            </div>
+        <div class="container" id="form-container">
+          <form action="action.php" id="enquiries-form" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
+
+            <label for="number">Number</label>
+            <input type="number" id="number" name="number" placeholder="Enquiries number is">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email is">
+            
+            <label for="enquiry">Enquiry</label>
+            <textarea id="enquiry" name="enquiry" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
           </form>
         </div>
-!<div id="footer">
+      </div>
+    </div>
+<!--div id="footer">
   <div>
     <div> <span>Follow us</span> <a href="#" class="facebook">Facebook</a> <a href="#" class="subscribe">Subscribe</a> <a href="#" class="twitter">Twitter</a> <a href="#" class="flicker">Flickr</a> </div>
     <ul>
@@ -68,7 +70,7 @@
         <p>For enrollment fee free to visit our site @10 Casterns Belvedere or visit our facebook page - Littlejoy Special School , twitter @Littlejoy_SpecialXL.</p>
         <a href="#" class="readmore">Read more</a> </li>
     </ul>
-  </div>
+  </div-->
   <p class="footnote">Copyright &copy; 2020 <a href="#"> @Rufaro</a> All rights reserved | By <a target="_blank" href="http://rufarosatoro@gmail.com/">rufarosatoro@gmail.com</a></p></div>
 </body>
     </html>

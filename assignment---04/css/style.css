@@ -475,3 +475,36 @@ div.content p a {
 	color: #314810;
 	text-decoration:none;
 }
+
+#form-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#enquiries-form label {
+	font-weight: 600;
+	display: block;
+	margin: 5px 0;
+}
+
+#enquiries-form input {
+	margin-bottom: 15px;
+	padding: 8px 12px;
+	font-size: 15px;
+	width: 60%;
+}
+
+#enquiries-form textarea {
+	margin-bottom: 15px;
+	padding: 8px 12px;
+	font-size: 15px;
+	width: 60%;
+	display: block;
+}
+
+#enquiries-form [type="submit"] {
+	width: auto;
+	background-color: lightgreen;
+	border: none;
+	padding: 12px 20px;
+}
